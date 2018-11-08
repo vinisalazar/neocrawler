@@ -13,15 +13,18 @@ record = Entrez.read(handle)
 def summary(record):
     print('\n'.join(f'{k}\t{v}' for k, v in record[0].items()))
 
-def feat_table(record):
+def feat_table(record, p=False):
+    """
+    Get the feature table from a record as a dictionary.
+    If p is set to True, will also print the feature table.
+    """
     feat_table = record[0]['GBSeq_feature-table'][0]["GBFeature_quals"]
-    for d in feat_table:
+    d = {}
+    for i in feat_table:
+        d[i["GBQualifier_name"]] = i["GBQualifier_value"]
+    d['tax ID'] = d['db_xref'].split(':')[-1]
+    del d['db_xref']
+    if p:
         print('\n'.join(f'{k}\t{v}' for k, v in d.items()))
-    return feat_table
-
-
-table = feat_table(record)
-
-d = {}
-for i in table:
-    d[i["GBQualifier_name"]] = i["GBQualifier_value"]
+    else:
+        return d
