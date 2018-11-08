@@ -4,4 +4,4 @@ This is a repository to crawl the [Bacterio webpage](http://www.bacterio.net/) u
 
 Also, this is my attempt at learning some web crawling.
 
-Made with <3 for the best microbiome company.
+Made with :heart: for the best microbiome company.
