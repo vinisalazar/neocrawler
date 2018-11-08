@@ -15,5 +15,7 @@ class EntrySpider(scrapy.Spider):
         # 'http://www.bacterio.net/-allnamessz.html'
     ]
     def parse(self, response):
-        for p in response.css('a[href*="https://www.ncbi.nlm.nih.gov/nuccore/"]::text'):
+        for p in response.css(
+            'a[href*="https://www.ncbi.nlm.nih.gov/"]::text'
+            ):
             yield { 'ncbi_id': p.extract() }
