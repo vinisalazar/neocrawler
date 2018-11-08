@@ -3,11 +3,15 @@ import scrapy
 
 class EntrySpider(scrapy.Spider):
     name="entries"
-    start_urls = [
-        'http://www.bacterio.net/-allnamesac.html'
+    urls = [
+        'http://www.bacterio.net/-allnamesac.html',
+        'http://www.bacterio.net/-allnamesdl.html',
+        'http://www.bacterio.net/-allnamesmr.html',
+        'http://www.bacterio.net/-allnamessz.html'
     ]
+
     def parse(self, response):
-        for p in response.css('div.main-text'):
+        for p in response.css('p'):
             yield {
                 'genus': p.css('span.class::genusspecies')
             }
