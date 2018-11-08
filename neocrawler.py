@@ -13,7 +13,6 @@ class EntrySpider(scrapy.Spider):
 
     def parse(self, response):
         for p in response.css('a[href*="https://www.ncbi.nlm.nih.gov/nuccore/"]::text'):
-            # import pdb; pdb.set_trace()
             yield {
                 # 'genus': p.css('span.taxon-subhead-16s::text').extract_first()
                 'genus': p.extract()
