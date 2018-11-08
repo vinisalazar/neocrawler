@@ -3,15 +3,18 @@ import scrapy
 
 class EntrySpider(scrapy.Spider):
     name="entries"
-    urls = [
-        'http://www.bacterio.net/-allnamesac.html',
-        'http://www.bacterio.net/-allnamesdl.html',
-        'http://www.bacterio.net/-allnamesmr.html',
-        'http://www.bacterio.net/-allnamessz.html'
+    start_urls = [
+        'http://www.bacterio.net/abiotrophia.html'
+        # 'http://www.bacterio.net/-allnamesac.html',
+        # 'http://www.bacterio.net/-allnamesdl.html',
+        # 'http://www.bacterio.net/-allnamesmr.html',
+        # 'http://www.bacterio.net/-allnamessz.html'
     ]
 
     def parse(self, response):
-        for p in response.css('p'):
+        for p in response.css('a[href*="https://www.ncbi.nlm.nih.gov/nuccore/"]::text'):
+            # import pdb; pdb.set_trace()
             yield {
-                'genus': p.css('span.class::genusspecies')
+                # 'genus': p.css('span.taxon-subhead-16s::text').extract_first()
+                'genus': p.extract()
             }
