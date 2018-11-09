@@ -1,6 +1,6 @@
 __author__ = "Vini Salazar"
 import argparse
-import threading
+from time import sleep
 from Bio import SeqIO
 from Bio import Entrez
 
@@ -17,17 +17,21 @@ This will process the output of our crawler with the Entrez module.
 
 """
 
-def cleaner(file, overwrite=False, out=None):
+def cleaner(file, overwrite=False, out=None, skip=True):
     """
     This function cleans our crawler output. If overwritten is false, the
     original output will be kept. Otherwise, it will be cleaned. Use the out
     kwarg to specify a suffix to the outputfile.
     """
     with open(file, 'r') as f:
-        r = f.readlines()[1:]
+        if skip:
+            r = f.readlines()[1:]
+        else:
+            r = f.readlines()
+
         r = [i.strip() for i in r if len(i) > 4 and not len(i.split()) > 1]
         r = [i.replace('"', '') for i in r]
-        r = [i.replace(',', '') forTrue i in r]
+        r = [i.replace(',', '') for i in r]
 
     if out:
         file = file.split('.')[-2] + out + '.' + file.split('.')[-1]
@@ -39,20 +43,14 @@ def cleaner(file, overwrite=False, out=None):
     return r
 
 
-def ncbi_request(accession, p=False, feats=False):
+def ncbi_request(record, p=False, feats=False):
     """
     Requests a record (accession number) from the NCBI Entrez and reads it.
     If summary is passed as True, prints the record with summary()
     If feat_table is passed as True, prints the feature table with feat_table()
     """
-    handle = Entrez.efetch(db='nuccore', id=accession, format='xml')
+    handle = Entrez.efetch(db='nuccore', id=record, format='xml')
     record = Entrez.read(handle)
-
-    if p:
-        summary(record)
-
-    if feats:
-        feat_table(record, p=True)
 
     return record[0]
 
@@ -64,12 +62,14 @@ def summary(record):
     'references', 'feature_table' and 'sequence' are excluded because they
     are too 'noisy'.
     """
-    print('\n'.join(f'{k}\t{v}'
+    summary = ('\n'.join(f'{k}\t{v}'
           for k, v in record.items() if
               'GBSeq_references' not in k and
               'GBSeq_feature-table' not in k and
               'GBSeq_sequence' not in k)
     )
+
+    return summary
 
 
 def feat_table(record, p=False):
@@ -90,10 +90,29 @@ def feat_table(record, p=False):
 
 
 def writer(record, taxfile, sequencefile, recordsfile):
+
+    features = feat_table(record)
+    info = summary(record)
+    name, strain, taxid = features['organism'],\
+                          features['strain'],\
+                          features['tax ID']
+
+    header = str(features)[13:-2].replace("'", '')
+    seq = record["GBSeq_sequence"].upper()
+
     with open(taxfile, 'a') as f:
+        f.write(f'{name} strain {strain}\t{taxid}\n')
+        f.close()
 
+    with open(sequencefile, 'a') as f:
+        f.write(f'> {header}\n{seq}\n')
+        f.close()
 
+    with open(recordsfile, 'a') as f:
+        f.write(info + '\n')
+        f.close()
 
+    return f'Written {record} to {taxfile}, {sequencefile}, {recordsfile}'
 
 
 if __name__ == "__main__":
@@ -104,7 +123,7 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", type=str, default="neocrawler.csv",
                         help="Path to input file in .csv format.\
                              can be either clean or dirty crawler output.")
-    parser.add_argument("-c", "--clean", default="neocraler.csv",
+    parser.add_argument("-c", "--clean", default="neocrawler.csv",
                         help="Select to clean your crawler output.")
     parser.add_argument("-r", "--recordsfile", default="raw_records.csv",
                         help="Path to output file with raw records.")
@@ -115,8 +134,10 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    records = cleaner(args.input)
 
-    records = cleaner(args.input, overwrite=False)
-
-    for accession in records:
-        threading.Timer(5.0, ncbi_request(accession, p=True))
+    for record in records:
+        record = ncbi_request(record)
+        print(summary(record))
+        writer(record, args.taxfile, args.sequencefile, args.recordsfile)
+        sleep(5)
