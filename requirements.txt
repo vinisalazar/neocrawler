@@ -1,0 +1,4 @@
+scrapy
+argparse
+biopython
+
