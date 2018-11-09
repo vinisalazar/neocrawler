@@ -108,7 +108,10 @@ def writer(record, taxfile, sequencefile, recordsfile):
                               features['tax ID']
 
     header = str(features)[13:-2].replace("'", '')
-    seq = record["GBSeq_sequence"].upper()
+    try:
+        seq = record["GBSeq_sequence"].upper()
+    except KeyError:
+        seq = 'ATCG'
 
     with open(taxfile, 'a') as f:
         f.write(f'{name} strain {strain}\t{taxid}\n')
@@ -133,8 +136,6 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", type=str, default="neocrawler.csv",
                         help="Path to input file in .csv format.\
                              can be either clean or dirty crawler output.")
-    parser.add_argument("-c", "--clean", default="neocrawler.csv",
-                        help="Select to clean your crawler output.")
     parser.add_argument("-r", "--recordsfile", default="raw_records.csv",
                         help="Path to output file with raw records.")
     parser.add_argument("-t", "--taxfile", type=str, default="crawler_tax.csv",
