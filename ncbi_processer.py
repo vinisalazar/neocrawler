@@ -16,7 +16,7 @@ This will process the output of our crawler with the Entrez module.
 
 """
 
-def cleaner(file, overwrite=True, out=None):
+def cleaner(file, overwrite=False, out=None):
     """
     This function cleans our crawler output. If overwritten is false, the
     original output will be kept. Otherwise, it will be cleaned. Use the out
@@ -94,8 +94,9 @@ if __name__ == "__main__":
         description="This script processes our crawler output."
         )
     parser.add_argument("-i", "--input", type=str, default="neocrawler.csv")
-    args = parser.parse_args()
+    args = parser.parse_args("-c", "--clean")
 
     records = cleaner(args.input, overwrite=False)
+
     for record in records:
         ncbi_request(record, p=True, feats=True)
