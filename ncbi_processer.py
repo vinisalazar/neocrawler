@@ -16,10 +16,11 @@ This will process the output of our crawler with the Entrez module.
 
 """
 
-
 def cleaner(file, overwrite=True, out=None):
     """
-    This function cleans our c
+    This function cleans our crawler output. If overwritten is false, the
+    original output will be kept. Otherwise, it will be cleaned. Use the out
+    kwarg to specify a suffix to the outputfile.
     """
     with open(file, 'r') as f:
         r = f.readlines()[1:]
@@ -63,10 +64,10 @@ def summary(record):
     are too 'noisy'.
     """
     print('\n'.join(f'{k}\t{v}'
-    for k, v in record[0].items() if
-        'GBSeq_references' not in k and
-        'GBSeq_feature-table' not in k and
-        'GBSeq_sequence' not in k)
+          for k, v in record[0].items() if
+              'GBSeq_references' not in k and
+              'GBSeq_feature-table' not in k and
+              'GBSeq_sequence' not in k)
     )
 
 
@@ -86,5 +87,15 @@ def feat_table(record, p=False):
     else:
         return d
 
+
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="")
+    parser = argparse.ArgumentParser(
+        description="This file processes our crawler output."
+        )
+    parser.add_argument("-c", "--cleaner", default=False,
+        help=""
+        )
+
+    if args.cleaner:
+        if args.overwrite
