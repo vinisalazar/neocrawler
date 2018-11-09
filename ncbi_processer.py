@@ -1,6 +1,7 @@
 __author__ = "Vini Salazar"
-import os
 import argparse
+import threading
+from Bio import SeqIO
 from Bio import Entrez
 
 # Please replace with your own e-mail
@@ -26,7 +27,7 @@ def cleaner(file, overwrite=False, out=None):
         r = f.readlines()[1:]
         r = [i.strip() for i in r if len(i) > 4 and not len(i.split()) > 1]
         r = [i.replace('"', '') for i in r]
-        r = [i.replace(',', '') for i in r]
+        r = [i.replace(',', '') forTrue i in r]
 
     if out:
         file = file.split('.')[-2] + out + '.' + file.split('.')[-1]
@@ -38,13 +39,13 @@ def cleaner(file, overwrite=False, out=None):
     return r
 
 
-def ncbi_request(record, p=False, feats=False):
+def ncbi_request(accession, p=False, feats=False):
     """
     Requests a record (accession number) from the NCBI Entrez and reads it.
     If summary is passed as True, prints the record with summary()
     If feat_table is passed as True, prints the feature table with feat_table()
     """
-    handle = Entrez.efetch(db='nuccore', id=record, format='xml')
+    handle = Entrez.efetch(db='nuccore', id=accession, format='xml')
     record = Entrez.read(handle)
 
     if p:
@@ -53,7 +54,7 @@ def ncbi_request(record, p=False, feats=False):
     if feats:
         feat_table(record, p=True)
 
-    return record
+    return record[0]
 
 
 # This prints a summary of the information
@@ -64,7 +65,7 @@ def summary(record):
     are too 'noisy'.
     """
     print('\n'.join(f'{k}\t{v}'
-          for k, v in record[0].items() if
+          for k, v in record.items() if
               'GBSeq_references' not in k and
               'GBSeq_feature-table' not in k and
               'GBSeq_sequence' not in k)
@@ -76,7 +77,7 @@ def feat_table(record, p=False):
     Get the feature table from a record as a dictionary.
     If p is set to True, will also print the feature table.
     """
-    feat_table = record[0]['GBSeq_feature-table'][0]["GBFeature_quals"]
+    feat_table = record['GBSeq_feature-table'][0]["GBFeature_quals"]
     d = {}
     for i in feat_table:
         d[i["GBQualifier_name"]] = i["GBQualifier_value"]
@@ -88,15 +89,34 @@ def feat_table(record, p=False):
         return d
 
 
+def writer(record, taxfile, sequencefile, recordsfile):
+    with open(taxfile, 'a') as f:
+
+
+
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="This script processes our crawler output."
         )
-    parser.add_argument("-i", "--input", type=str, default="neocrawler.csv")
-    args = parser.parse_args("-c", "--clean")
+
+    parser.add_argument("-i", "--input", type=str, default="neocrawler.csv",
+                        help="Path to input file in .csv format.\
+                             can be either clean or dirty crawler output.")
+    parser.add_argument("-c", "--clean", default="neocraler.csv",
+                        help="Select to clean your crawler output.")
+    parser.add_argument("-r", "--recordsfile", default="raw_records.csv",
+                        help="Path to output file with raw records.")
+    parser.add_argument("-t", "--taxfile", type=str, default="crawler_tax.csv",
+                        help="Path to output tax ID and tax names file.")
+    parser.add_argument("-s", "--sequencefile", type=str, default="crawler_seqs.fasta",
+                        help="Path to output fasta file containing sequences.")
+
+    args = parser.parse_args()
+
 
     records = cleaner(args.input, overwrite=False)
 
-    for record in records:
-        ncbi_request(record, p=True, feats=True)
+    for accession in records:
+        threading.Timer(5.0, ncbi_request(accession, p=True))
