@@ -1,4 +1,5 @@
 __author__ = "Vini Salazar"
+import os
 import argparse
 from time import sleep
 from Bio import SeqIO
@@ -91,11 +92,20 @@ def feat_table(record, p=False):
 
 def writer(record, taxfile, sequencefile, recordsfile):
 
+    taxfile, sequencefile, recordsfile = os.path.join('data/', taxfile),\
+                                         os.path.join('data/', sequencefile),\
+                                         os.path.join('data/', recordsfile)
+
     features = feat_table(record)
     info = summary(record)
-    name, strain, taxid = features['organism'],\
-                          features['strain'],\
-                          features['tax ID']
+    try:
+        name, strain, taxid = features['organism'],\
+                            features['strain'],\
+                            features['tax ID']
+    except KeyError:
+        name, strain, taxid = features['organism'],\
+                              '<Unknown strain>',\
+                              features['tax ID']
 
     header = str(features)[13:-2].replace("'", '')
     seq = record["GBSeq_sequence"].upper()

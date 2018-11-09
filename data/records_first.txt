@@ -1,0 +1,293 @@
+GBSeq_locus	X93191
+GBSeq_length	1476
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	14-NOV-2006
+GBSeq_create-date	19-DEC-1996
+GBSeq_definition	D.aurantiacum 16S rRNA gene
+GBSeq_primary-accession	X93191
+GBSeq_accession-version	X93191.1
+GBSeq_other-seqids	['emb|X93191.1|', 'gi|1747353']
+GBSeq_keywords	['16S ribosomal RNA', '16S rRNA gene']
+GBSeq_source	Dactylosporangium aurantiacum
+GBSeq_organism	Dactylosporangium aurantiacum
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	KF928748
+GBSeq_length	1509
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	03-MAY-2016
+GBSeq_create-date	15-DEC-2013
+GBSeq_definition	Dactylosporangium cerinum strain NEAU-TPG4 16S ribosomal RNA gene, partial sequence
+GBSeq_primary-accession	KF928748
+GBSeq_accession-version	KF928748.1
+GBSeq_other-seqids	['gb|KF928748.1|', 'gi|564473436']
+GBSeq_source	Dactylosporangium cerinum
+GBSeq_organism	Dactylosporangium cerinum
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_comment	##Assembly-Data-START## ; Assembly Method :: ContigExpress v. 2010 ; Sequencing Technology :: ABI3730 ; ##Assembly-Data-END##
+GBSeq_locus	FM882231
+GBSeq_length	1422
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	29-OCT-2014
+GBSeq_create-date	07-JUN-2010
+GBSeq_definition	Dactylosporangium darangshiense partial 16S rRNA gene, strain DLS-44
+GBSeq_primary-accession	FM882231
+GBSeq_accession-version	FM882231.1
+GBSeq_other-seqids	['emb|FM882231.1|', 'gi|297631945']
+GBSeq_source	Dactylosporangium darangshiense
+GBSeq_organism	Dactylosporangium darangshiense
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	X93192
+GBSeq_length	1475
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	14-NOV-2006
+GBSeq_create-date	19-DEC-1996
+GBSeq_definition	D.fulvum 16S rRNA gene
+GBSeq_primary-accession	X93192
+GBSeq_accession-version	X93192.1
+GBSeq_other-seqids	['emb|X93192.1|', 'gi|1747354']
+GBSeq_keywords	['16S ribosomal RNA', '16S rRNA gene']
+GBSeq_source	Dactylosporangium fulvum
+GBSeq_organism	Dactylosporangium fulvum
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	FJ973605
+GBSeq_length	1441
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	18-NOV-2013
+GBSeq_create-date	09-JUN-2009
+GBSeq_definition	Dactylosporangium luridum strain BK63 16S ribosomal RNA gene, partial sequence
+GBSeq_primary-accession	FJ973605
+GBSeq_accession-version	FJ973605.1
+GBSeq_other-seqids	['gb|FJ973605.1|', 'gi|238886065']
+GBSeq_source	Dactylosporangium luridum
+GBSeq_organism	Dactylosporangium luridum
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	FJ973604
+GBSeq_length	1444
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	18-NOV-2013
+GBSeq_create-date	09-JUN-2009
+GBSeq_definition	Dactylosporangium luteum strain BK51 16S ribosomal RNA gene, partial sequence
+GBSeq_primary-accession	FJ973604
+GBSeq_accession-version	FJ973604.1
+GBSeq_other-seqids	['gb|FJ973604.1|', 'gi|238886064']
+GBSeq_source	Dactylosporangium luteum
+GBSeq_organism	Dactylosporangium luteum
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	AB495209
+GBSeq_length	1468
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	19-MAY-2010
+GBSeq_create-date	09-APR-2009
+GBSeq_definition	Dactylosporangium maewongense gene for 16S ribosomal RNA, partial sequence
+GBSeq_primary-accession	AB495209
+GBSeq_accession-version	AB495209.1
+GBSeq_other-seqids	['dbj|AB495209.1|', 'gi|226442395']
+GBSeq_source	Dactylosporangium maewongense
+GBSeq_organism	Dactylosporangium maewongense
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	X93193
+GBSeq_length	1469
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	14-NOV-2006
+GBSeq_create-date	19-DEC-1996
+GBSeq_definition	D.matsuzakiense 16S rRNA gene
+GBSeq_primary-accession	X93193
+GBSeq_accession-version	X93193.1
+GBSeq_other-seqids	['emb|X93193.1|', 'gi|1747355']
+GBSeq_keywords	['16S ribosomal RNA', '16S rRNA gene']
+GBSeq_source	Dactylosporangium matsuzakiense
+GBSeq_organism	Dactylosporangium matsuzakiense
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	X93194
+GBSeq_length	1472
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	14-NOV-2006
+GBSeq_create-date	19-DEC-1996
+GBSeq_definition	D.roseum 16S rRNA gene
+GBSeq_primary-accession	X93194
+GBSeq_accession-version	X93194.1
+GBSeq_other-seqids	['emb|X93194.1|', 'gi|1747358']
+GBSeq_keywords	['16S ribosomal RNA', '16S rRNA gene']
+GBSeq_source	Dactylosporangium roseum
+GBSeq_organism	Dactylosporangium roseum
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	FJ973607
+GBSeq_length	1433
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	18-NOV-2013
+GBSeq_create-date	09-JUN-2009
+GBSeq_definition	Dactylosporangium salmoneum strain NRRL B-16294 16S ribosomal RNA gene, partial sequence
+GBSeq_primary-accession	FJ973607
+GBSeq_accession-version	FJ973607.1
+GBSeq_other-seqids	['gb|FJ973607.1|', 'gi|238886067']
+GBSeq_source	Dactylosporangium salmoneum
+GBSeq_organism	Dactylosporangium salmoneum
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	AB529446
+GBSeq_length	1433
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	29-NOV-2013
+GBSeq_create-date	24-OCT-2009
+GBSeq_definition	Dactylosporangium siamense gene for 16S rRNA, partial sequence
+GBSeq_primary-accession	AB529446
+GBSeq_accession-version	AB529446.1
+GBSeq_other-seqids	['dbj|AB529446.1|', 'gi|262036899']
+GBSeq_source	Dactylosporangium siamense
+GBSeq_organism	Dactylosporangium siamense
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	KT208368
+GBSeq_length	1508
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	13-APR-2017
+GBSeq_create-date	05-DEC-2015
+GBSeq_definition	Dactylosporangium solaniradicis strain NEAU-FJL2 16S ribosomal RNA gene, partial sequence
+GBSeq_primary-accession	KT208368
+GBSeq_accession-version	KT208368.1
+GBSeq_other-seqids	['gb|KT208368.1|', 'gi|955670760']
+GBSeq_source	Dactylosporangium solaniradicis
+GBSeq_organism	Dactylosporangium solaniradicis
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	AB872783
+GBSeq_length	1422
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	04-JUL-2015
+GBSeq_create-date	20-NOV-2013
+GBSeq_definition	Dactylosporangium sucinum gene for 16S ribosomal RNA, partial sequence
+GBSeq_primary-accession	AB872783
+GBSeq_accession-version	AB872783.1
+GBSeq_other-seqids	['dbj|AB872783.1|', 'gi|558607622']
+GBSeq_source	Dactylosporangium sucinum
+GBSeq_organism	Dactylosporangium sucinum
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	X92630
+GBSeq_length	1469
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	25-SEP-1996
+GBSeq_create-date	03-JUN-1996
+GBSeq_definition	D.thailandense 16S rRNA gene
+GBSeq_primary-accession	X92630
+GBSeq_accession-version	X92630.1
+GBSeq_other-seqids	['emb|X92630.1|', 'gi|1359615']
+GBSeq_keywords	['16S ribosomal RNA', '16S rRNA gene']
+GBSeq_source	Dactylosporangium thailandense
+GBSeq_organism	Dactylosporangium thailandense
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	AB454508
+GBSeq_length	1452
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	25-OCT-2011
+GBSeq_create-date	26-AUG-2008
+GBSeq_definition	Dactylosporangium tropicum gene for 16S rRNA, partial sequence, strain: KB2-4
+GBSeq_primary-accession	AB454508
+GBSeq_accession-version	AB454508.1
+GBSeq_other-seqids	['dbj|AB454508.1|', 'gi|197267560']
+GBSeq_source	Dactylosporangium tropicum
+GBSeq_organism	Dactylosporangium tropicum
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	X93196
+GBSeq_length	1476
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	14-NOV-2006
+GBSeq_create-date	19-DEC-1996
+GBSeq_definition	D.vinaceum 16S rRNA gene
+GBSeq_primary-accession	X93196
+GBSeq_accession-version	X93196.1
+GBSeq_other-seqids	['emb|X93196.1|', 'gi|1747360']
+GBSeq_keywords	['16S ribosomal RNA', '16S rRNA gene']
+GBSeq_source	Dactylosporangium vinaceum
+GBSeq_organism	Dactylosporangium vinaceum
+GBSeq_taxonomy	Bacteria; Actinobacteria; Micromonosporales; Micromonosporaceae; Dactylosporangium
+GBSeq_locus	KX343046
+GBSeq_length	1471
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	17-SEP-2018
+GBSeq_create-date	24-SEP-2016
+GBSeq_definition	Sabulilitoribacter arenilitoris strain HMF6543 16S ribosomal RNA gene, partial sequence
+GBSeq_primary-accession	KX343046
+GBSeq_accession-version	KX343046.1
+GBSeq_other-seqids	['gb|KX343046.1|', 'gi|1067908644']
+GBSeq_source	Sabulilitoribacter arenilitoris
+GBSeq_organism	Sabulilitoribacter arenilitoris
+GBSeq_taxonomy	Bacteria; Bacteroidetes; Flavobacteriia; Flavobacteriales; Flavobacteriaceae; Sabulilitoribacter
+GBSeq_locus	KC618395
+GBSeq_length	1439
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	24-NOV-2015
+GBSeq_create-date	06-APR-2013
+GBSeq_definition	Sabulilitoribacter multivorans strain M-M16 from South Korea 16S ribosomal RNA gene, partial sequence
+GBSeq_primary-accession	KC618395
+GBSeq_accession-version	KC618395.1
+GBSeq_other-seqids	['gb|KC618395.1|', 'gi|472403327']
+GBSeq_source	Sabulilitoribacter multivorans
+GBSeq_organism	Sabulilitoribacter multivorans
+GBSeq_taxonomy	Bacteria; Bacteroidetes; Flavobacteriia; Flavobacteriales; Flavobacteriaceae; Sabulilitoribacter
+GBSeq_comment	##Assembly-Data-START## ; Sequencing Technology :: Sanger dideoxy sequencing ; ##Assembly-Data-END##
+GBSeq_locus	AB021417
+GBSeq_length	1522
+GBSeq_strandedness	double
+GBSeq_moltype	DNA
+GBSeq_topology	linear
+GBSeq_division	BCT
+GBSeq_update-date	08-NOV-2014
+GBSeq_create-date	21-JAN-1999
+GBSeq_definition	Delftia acidovorans gene for 16S rRNA, strain: IAM 12409
+GBSeq_primary-accession	AB021417
+GBSeq_accession-version	AB021417.1
+GBSeq_other-seqids	['dbj|AB021417.1|', 'gi|4165423']
+GBSeq_source	Delftia acidovorans
+GBSeq_organism	Delftia acidovorans
+GBSeq_taxonomy	Bacteria; Proteobacteria; Betaproteobacteria; Burkholderiales; Comamonadaceae; Delftia
