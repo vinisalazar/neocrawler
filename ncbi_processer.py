@@ -91,11 +91,11 @@ def feat_table(record, p=False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="This file processes our crawler output."
+        description="This script processes our crawler output."
         )
-    parser.add_argument("-c", "--cleaner", default=False,
-        help=""
-        )
+    parser.add_argument("-i", "--input", type=str, default="neocrawler.csv")
+    args = parser.parse_args()
 
-    if args.cleaner:
-        if args.overwrite
+    records = cleaner(args.input, overwrite=False)
+    for record in records:
+        ncbi_request(record, p=True, feats=True)
