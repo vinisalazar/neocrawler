@@ -148,7 +148,10 @@ if __name__ == "__main__":
     records = cleaner(args.input)
 
     for record in records:
-        record = ncbi_request(record)
-        print(summary(record))
-        writer(record, args.taxfile, args.sequencefile, args.recordsfile)
-        sleep(5)
+        try:
+            record = ncbi_request(record)
+            print(summary(record))
+            writer(record, args.taxfile, args.sequencefile, args.recordsfile)
+            sleep(2)
+        except:
+            pass
