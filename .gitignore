@@ -1,6 +1,6 @@
 __pycache__
 tutorial/
 screenlog.*
-*/*.fasta
+*.fasta
 .bkp.csv
 */*.tar.gz
