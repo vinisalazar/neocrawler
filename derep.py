@@ -22,6 +22,8 @@ records = []
 for v in drop_d.values():
     records.append(v)
 
-
+"""
+This guy is not trimmed. Might make a trimmed version.
+"""
 with open("seqs_derep_1.fasta", "w") as f:
     SeqIO.write(records, f, "fasta")
