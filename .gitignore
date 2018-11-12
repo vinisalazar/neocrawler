@@ -1,4 +1,4 @@
 __pycache__
 tutorial/
 screenlog.0
-data/seqs_first.fasta data/seqs_uc.fasta data/seqs_uc_relabel.fasta
+**/*.fasta
