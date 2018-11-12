@@ -4,3 +4,4 @@ screenlog.*
 *.fasta
 .bkp.csv
 *.tar.gz
+*screenlog*
