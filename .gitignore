@@ -1,4 +1,5 @@
 __pycache__
 tutorial/
-screenlog.0
+screenlog.*
 */*.fasta
+.bkp.csv
