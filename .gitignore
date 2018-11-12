@@ -3,4 +3,4 @@ tutorial/
 screenlog.*
 *.fasta
 .bkp.csv
-*/*.tar.gz
+*.tar.gz
