@@ -6,7 +6,7 @@ from Bio import SeqIO
 from Bio import Entrez
 
 # Please replace with your own e-mail
-Entrez.email = "vinicius.salazar@neoprospecta.com"
+Entrez.email = "myemail@email.com"
 
 """
 This will process the output of our crawler with the Entrez module.
