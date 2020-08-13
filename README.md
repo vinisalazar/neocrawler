@@ -1,6 +1,6 @@
 ### Neocrawler
 
-This is a repository to crawl the [Bacterio webpage](http://www.bacterio.net/) using [Scrapy](https://scrapy.org). I wanted (and was able to!) to extract all 16S rRNA entries associated with a taxonomy.
+This is a repository to crawl the [Bacterio webpage](http://www.bacterio.net/) using [Scrapy](https://scrapy.org). The goal is to extract all 16S rRNA entries associated with a taxonomy.
 
 Also, this is my attempt at learning some web crawling.
 
